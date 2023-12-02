@@ -1,0 +1,7 @@
+{
+  "name": "project_final",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}

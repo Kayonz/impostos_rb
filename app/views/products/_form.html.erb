@@ -1,0 +1,53 @@
+<head>
+  <%= stylesheet_link_tag 'product_style', media: 'all' %>
+</head>
+
+<!-- app/views/products/new.html.erb -->
+<header class="bg-gray-800 text-white p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-2xl font-bold">Produtos Impostados</div>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="hover:text-purple-300">Home</a></li>
+        <li><a href="<%= products_path %>" class="hover:text-purple-300">Listagem de Produtos</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> isto proibiu que este produto fosse salvo:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nomeProduto %>
+    <%= form.text_field :"Nome do Produto "%>
+  </div>
+  
+  <div class="field">
+  <%= form.label :impostoProduto %>
+  <%= form.select :impostoProduto, options_for_select([['12%', 12], ['15%', 15], ['20%', 20]], selected: product.taxaImposto), class: 'form-control' %>
+</div>
+
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.text_field :valor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

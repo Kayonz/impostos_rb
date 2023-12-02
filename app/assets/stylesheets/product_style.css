@@ -1,0 +1,93 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #292c37;
+      color: #cccccc;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #292c37;
+      color: #cccccc;
+      padding: 20px;
+      text-align: center;
+      box-shadow: -5px 5px 3px #2c2621;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      color: #cccccc
+    }
+
+    li {
+      margin-right: 20px;
+      color: #cccccc;
+    }
+
+    a {
+      color: #cccccc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #2c2621; /* Adicionei uma cor de fundo para o formulário */
+      border-radius: 8px; /* Borda arredondada para o formulário */
+      box-shadow: 0 0 10px #2c2621; /* Sombra suave para o formulário */
+    }
+
+    h1 {
+      color: #292c37;
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin-top: 20px;
+      margin-left: auto; /* Alinha à direita para compensar a margem à esquerda */
+      margin-right: auto; /* Alinha à esquerda para compensar a margem à direita */
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 20px;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      background-color: #f2f2f2;
+      color: #333333;
+    }
+    
+    input[type="submit"] {
+      background-color: #292c37;
+      color: #ffffff;
+      padding: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #4a4d5f;
+    }
